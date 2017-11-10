@@ -8,8 +8,15 @@
 
 #import <UIKit/UIKit.h>
 
-@interface ViewController : UIViewController
+@interface ViewController : UIViewController <UIGestureRecognizerDelegate> {
+    UITapGestureRecognizer *tap;
+    BOOL isFullScreen;
+    CGRect prevFrame;
+}
 
+@property (weak, nonatomic) IBOutlet UIImageView *nature;
+
+@property (weak, nonatomic) IBOutlet UIImageView *shapeAmerica;
 
 @end
 
